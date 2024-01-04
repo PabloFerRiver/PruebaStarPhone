@@ -37,6 +37,8 @@ jobs:
         uses: entimaniac/read-pom-version-action@1.0.0
         id: getVersion
 
+      - name: Imprimir valor del secret
+        run: echo ${{ secrets.MI_SECRET }}
 
       - name: Build with Maven and analyze with Sonar Cloud
         env:
